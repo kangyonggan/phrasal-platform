@@ -1,0 +1,30 @@
+server:
+  port: 8801
+
+spring:
+  profiles:
+    active: @env@
+  application:
+    name: PHRASAL-PLATFORM
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  type-aliases-package: com.kangyonggan.pp.model
+  config-location: classpath:mybatis.xml
+
+mapper:
+  mappers: com.kangyonggan.common.mybatis.MyMapper
+  not-empty: false
+  identity: MYSQL
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
