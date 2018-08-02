@@ -42,6 +42,9 @@
 
         <!--common-->
         <common.version>1.0.0</common.version>
+
+        <!--log4j2-->
+        <log4j2.api.version>2.5</log4j2.api.version>
     </properties>
 
     <build>
@@ -121,6 +124,18 @@
                 <groupId>com.kangyonggan</groupId>
                 <artifactId>common</artifactId>
                 <version>${common.version}</version>
+            </dependency>
+
+            <!--log4j2-->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j2.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j2.api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
