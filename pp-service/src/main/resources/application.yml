@@ -22,9 +22,3 @@ mapper:
   mappers: com.kangyonggan.common.mybatis.MyMapper
   not-empty: false
   identity: MYSQL
-
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
